@@ -1,12 +1,13 @@
 require ('pry')
 
 class Allergen_score
-  attr_reader(:allergy_array)
+  attr_reader(:allergy_array, :number)
+  
   def initialize(number)
     @number = number
   end
 
-  def egg_allergy
+  def allergy_calc
     allergen = {"cats" => 128, "pollen" => 64, "chocolate" => 32, "tomatoes" => 16, "strawberries" => 8, "shellfish" => 4, "peanuts" => 2, "eggs" => 1}
     @allergy_array = []
     allergen.map{ |a| 
@@ -16,9 +17,4 @@ class Allergen_score
       end   
     }
   end
-  
 end
-
-# def array_doubler(array)
-#   allergen.map { |a| puts a*2 }
-# end
