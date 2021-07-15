@@ -15,6 +15,6 @@ class Allergen_score
         @number = @number - a[1]
         @allergy_array.push(a[0])
       end   
-    }
+      }
   end
 end
